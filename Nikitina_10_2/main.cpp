@@ -1,12 +1,12 @@
-#include <iostream>//дл¤ cin cout
-#include <fstream>//дл¤ ifstream/ofstream
-#include <string>//дл¤ getline и сложени¤ строк
+#include <iostream>//для cin cout
+#include <fstream>//для ifstream/ofstream
+#include <string>//для getline и сложени¤ строк
 
 using namespace std;
 
 void remove_longest(string& line)
 {
-	//создаЄм массив слов
+	//создаём массив слов
 	string* words = new string[line.length()];
 	int count = 0;//количество слов пока 0
 	words[count] = string();//инициализируем 0 слово
@@ -21,7 +21,7 @@ void remove_longest(string& line)
 		words[count] += line[i];//переписываем 1 символ из строки в слово
 	}
 	
-	//ѕоиск максимальной длины слова
+	//поиск максимальной длины слова
 	int max_length = words[0].length();
 	int max_index = 0;
 	for (int i = 1; i < count; i++)
@@ -36,7 +36,7 @@ void remove_longest(string& line)
 	//очищаем строку
 	line.clear();
 
-	//добавл¤ем в неЄ обратно все слова, кроме наибольшего
+	//добавляем в неё обратно все слова, кроме наибольшего
 	for (int i = 0; i < max_index; i++)
 	{
 		line += words[i] + " ";
@@ -45,13 +45,13 @@ void remove_longest(string& line)
 	{
 		line += words[i] + " ";
 	}
-	delete[] words;//удал¤ем пам¤ть под временный массив слов
+	delete[] words;//удаляем пам¤ть под временный массив слов
 }
 
 int main()
 {
 	setlocale(LC_ALL, "russian");
-	cout << "јвтор: Ќикитина ƒарь¤ —ергеевна\n";
+	cout << "Автор: Никитина Дарья Сергеевна\n";
 
 	ifstream f1("f1.txt");
 	ofstream f2("f2.txt");
