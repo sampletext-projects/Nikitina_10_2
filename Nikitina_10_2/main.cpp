@@ -1,4 +1,4 @@
-#include <iostream>//для cin cout
+﻿#include <iostream>//для cin cout
 #include <fstream>//для ifstream/ofstream
 #include <string>//для getline и сложени¤ строк
 
